@@ -87,8 +87,9 @@
         @apply font-medium uppercase
     }
 
-
-
+    .footer{
+        @apply max-w-2xl mt-5 flex justify-center flex-wrap
+    }
 }
 
 

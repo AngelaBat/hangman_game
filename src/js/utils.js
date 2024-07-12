@@ -1,20 +1,20 @@
 //Темная тема
 export const darkModeHandle = () => {
-    const darkModeSwitcher = document.getElementById('toggleDarkMode')
-    const htmlElement = document.documentElement
-    
-    if(localStorage.getItem('mode') === 'dark'){
-        htmlElement.classList.add('dark')
-        darkModeSwitcher.checked = true
-    }
+  const darkModeSwitcher = document.getElementById("toggleDarkMode");
+  const htmlElement = document.documentElement;
 
-    darkModeSwitcher.addEventListener('input', () => {
-    htmlElement.classList.toggle('dark')
+  if (localStorage.getItem("mode") === "dark") {
+    htmlElement.classList.add("dark");
+    darkModeSwitcher.checked = true;
+  }
 
-    if(htmlElement.classList.contains('dark')){
-        localStorage.setItem('mode', 'dark')
-    }else{
-        localStorage.setItem('mode', 'light')
+  darkModeSwitcher.addEventListener("input", () => {
+    htmlElement.classList.toggle("dark");
+
+    if (htmlElement.classList.contains("dark")) {
+      localStorage.setItem("mode", "dark");
+    } else {
+      localStorage.setItem("mode", "light");
     }
-})
-}
+  });
+};
